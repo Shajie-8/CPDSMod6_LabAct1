@@ -144,9 +144,9 @@ public class Macabalang_Module6_LabAct1 {
     public static void main(String[] args) {
         String choice;
         do {
-            System.out.println("\n===== GRAPH MENU =====");
-            System.out.println("1. # of V (vertices)");
-            System.out.println("2. # of E (edges)");
+            System.out.println("\nGraph Menu");
+            System.out.println("1. # of V");
+            System.out.println("2. # of E");
             System.out.println("3. Add");
             System.out.println("4. Delete");
             System.out.println("5. Edit");
@@ -183,7 +183,7 @@ public class Macabalang_Module6_LabAct1 {
     }
 
     private static void addMenu() {
-        String c = readText("Add (V)ertex or (E)dge? ").toLowerCase();
+        String c = readText("Add Vertex or Edge? ").toLowerCase();
         if (c.equals("v")) {
             int count = readInt("How many vertices to add? ");
             if (count <= 0) {
@@ -204,7 +204,6 @@ public class Macabalang_Module6_LabAct1 {
             System.out.println(added + " vertex(es) added.");
         } else if (c.equals("e")) {
             System.out.println("Enter all edges on ONE line as: from to, separated by commas");
-            System.out.println("Example: A B, A C, B D   (add a number after the pair for a weight, like A B 3)");
             edgeBatch("add", "Edges: ", "added");
         } else {
             System.out.println("Invalid choice.");
@@ -212,7 +211,7 @@ public class Macabalang_Module6_LabAct1 {
     }
 
     private static void deleteMenu() {
-        String c = readText("Delete (V)ertex or (E)dge? ").toLowerCase();
+        String c = readText("Delete Vertex or Edge? ").toLowerCase();
         if (c.equals("v")) {
             String name = readText("Vertex name: ");
             System.out.println(g.deleteVertex(name) ? "Vertex deleted." : "Vertex not found.");
@@ -225,7 +224,7 @@ public class Macabalang_Module6_LabAct1 {
     }
 
     private static void editMenu() {
-        String c = readText("Edit (E)dge weight or (V)ertex name? ").toLowerCase();
+        String c = readText("Edit Edge weight or V3ertex name? ").toLowerCase();
         if (c.equals("e")) {
             System.out.println("Enter edges as: from to newWeight, separated by commas");
             System.out.println("Example: F H 3, A B 2");
